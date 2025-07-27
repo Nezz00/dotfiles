@@ -1,0 +1,89 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "network", "pulseaudio", "backlight", "battery", "custom/power", "custom/launcher"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "active": "",
+      "default": "" 
+    },
+    "persistent-workspaces": {
+      "eDP-1": [1, 2, 3, 4, 5]
+    }
+  },
+
+  "custom/launcher": {
+    "format":  " ",
+    "on-click": "rofi -show drun"
+  },
+
+  "clock": {
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %H:%M:%S}",
+    "interval": 60
+  },
+
+  "bluetooth": {
+    "on-click": "blueman-manager",
+    "format-disabled": "󰂲",
+    "format-enabled": "󰂰"   
+ 
+  },
+
+  "network": {
+    "format-wifi": "  {bandwidthDownBits} {bandwidthUpBytes}  ",
+    "format-ethernet": "󰈀  {ifname}",
+    "format-disconnected": "󰤮 Desconectado",
+    "on-click": "nm-connection-editor",
+    "interval": 10
+
+  }, 
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "󰝟 ",
+    "on-click": "pavucontrol"
+  },
+ 
+  "battery": {
+    "format": "󰁹 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged":  "󰂄 {capacity}%",
+    "format-alt": "{time} " 
+  },     
+
+  "custom/power": {
+    "format":  " ",
+    "on-click": "wlogout",
+    "tooltip": "Power Options"
+  },
+     
+  "backlight": {
+   "format": "{icon}  {percent}%",
+   "format-icons": ["", "", "", "", "", "", "", "", ""] 
+
+  },
+
+   "mpd": {
+    "format": "󰒮 {stateIcon} {title} ({artist}) 󰒭",
+    "format-disconnected": "Desconectado",
+    "format-paused": "⏸ {title} ({artist})", 
+    "format-stopped": "Detenido ⏹",
+    "stateIcons": {
+        "playing": "▶",
+        "paused": "⏸",
+        "stopped": "⏹"
+    },
+    "on-click": "rmpc prev",
+    "on-click-right": "rmpc next",
+    "on-click-middle": "rmpc stop",
+    "interval": 1
+ }
+}

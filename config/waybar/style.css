@@ -1,0 +1,72 @@
+@import '/home/alexlol/.cache/wal/colors-waybar.css';
+
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: UbuntuMono Nerd Font;
+    font-size: 14px;
+    font-style: normal;
+    min-height: 0;
+	}
+
+window#waybar {
+    background: rgba(16, 18, 19, 0);
+    color: @color13
+}
+
+#workspaces {
+	background: @color0;
+	margin: 2px 5px;
+    padding: 8px 5px;
+	border-radius: 16px;
+    border: solid 0px #cdd6f4;
+    font-weight: normal;
+    font-style: normal;
+}
+#workspaces button {
+    padding: 0px 5px;
+    margin: 0px 3px;
+    border-radius: 16px;
+    color: @color13;
+    background-color: @color7;
+    transition: all 0.3s ease-in-out;
+}
+#workspaces button.active {
+    color: #1e1728;
+    background-color: @color1;
+    border-radius: 16px;
+    min-width: 40px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+#workspaces button:hover {
+	background-color: @color13;
+	color: @color13;
+	border-radius: 16px;
+  min-width: 40px;
+  background-size: 400% 400%;
+}
+
+#clock, #battery, #pulseaudio, #network, #backlight, #custom-launcher, #custom-power, #tray {
+	background: @color0;
+  color: @color1;
+  padding: 0 10px;
+	margin: 2px;
+    border-radius: 10px;
+    border: solid 0px #f4d9e1;
+}
+
+#battery.charging {
+    color: @color1;
+}
+
+#battery.warning:not(.charging) {
+    color: #ff7eb6;
+}
+
+#custom-launcher {
+    font-size: 20px;
+}
+
+
